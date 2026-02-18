@@ -56,7 +56,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             F1Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()) {innerPadding ->
+                Scaffold(
+                    modifier = Modifier.fillMaxSize(),
+                    containerColor = Color.White
+                    ) {innerPadding ->
                     Column(
                         modifier = Modifier.padding(innerPadding)
                     ) {
