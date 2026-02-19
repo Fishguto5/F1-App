@@ -1,11 +1,11 @@
-package com.example.f1.screens.previews
+package com.example.f1.ui.screens.previews
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.f1.components.buttons.LogInButton
-import com.example.f1.screens.logIn.TextFieldBox
+import com.example.f1.ui.components.buttons.LogInButton
+import com.example.f1.ui.screens.logIn.TextFieldBox
 import com.example.f1.ui.theme.F1Theme
 
 @Preview(showBackground = true)

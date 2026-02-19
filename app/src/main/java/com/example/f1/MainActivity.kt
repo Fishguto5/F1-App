@@ -5,12 +5,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.ui.Modifier
-import com.example.f1.screens.logIn.InitialScreen
+import androidx.navigation.compose.rememberNavController
+import com.example.f1.ui.screens.logIn.InitialScreen
 import com.example.f1.ui.theme.F1Theme
 
 class MainActivity : ComponentActivity() {
@@ -24,15 +20,8 @@ class MainActivity : ComponentActivity() {
         )
         setContent {
             F1Theme {
-                Scaffold(
-                    modifier = Modifier.fillMaxSize(),
-                ) {innerPadding ->
-                    Column(
-                        modifier = Modifier.padding(innerPadding)
-                    ) {
-                        InitialScreen()
-                    }
-                }
+                val navController = rememberNavController()
+                InitialScreen()
             }
         }
     }

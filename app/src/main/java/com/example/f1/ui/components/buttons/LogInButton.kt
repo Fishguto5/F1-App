@@ -1,4 +1,4 @@
-package com.example.f1.components.buttons
+package com.example.f1.ui.components.buttons
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.shape.RoundedCornerShape

@@ -1,4 +1,4 @@
-package com.example.f1.components.naviagtionBar
+package com.example.f1.ui.components.navigationBar
 
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
@@ -10,16 +10,16 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.navigation.compose.rememberNavController
+import androidx.navigation.NavHostController
 
 @Composable
-fun NavigationBar(){
+fun NavigationBar(navController: NavHostController){
     val startDestination = Destination.HOME
     var selectedDestination by remember { mutableStateOf(startDestination.ordinal)}
-    val navController = rememberNavController()
     NavigationBar(
-        modifier = androidx.compose.ui.Modifier,
+        modifier = Modifier,
         containerColor = Color.Red,
         windowInsets = NavigationBarDefaults.windowInsets
     ) {

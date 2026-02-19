@@ -1,4 +1,4 @@
-package com.example.f1.screens.logIn
+package com.example.f1.ui.screens.logIn
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -47,7 +47,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.f1.R
-import com.example.f1.components.buttons.LogInButton
+import com.example.f1.ui.components.buttons.LogInButton
 import com.example.f1.ui.theme.F1Theme
 
 class MainActivity : ComponentActivity() {
@@ -226,16 +226,22 @@ fun TextFieldBox(
 @Composable
 fun InitialScreen() {
     F1Theme {
-        Column(
-            modifier = Modifier.fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            F1Logo(Modifier)
-            Spacer(Modifier.height(20.dp))
-            TextFieldBox(Modifier)
-            Spacer(Modifier.height(20.dp))
-            LogInButton(Modifier)
+        Scaffold(
+            modifier = Modifier.fillMaxSize()
+        ) { innerPadding ->
+            Column(
+                modifier = Modifier.padding(innerPadding),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+
+                F1Logo(Modifier)
+                Spacer(Modifier.height(20.dp))
+                TextFieldBox(Modifier)
+                Spacer(Modifier.height(20.dp))
+                LogInButton(Modifier)
+            }
         }
+
     }
 }
 

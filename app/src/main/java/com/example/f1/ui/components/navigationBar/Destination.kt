@@ -1,4 +1,4 @@
-package com.example.f1.components.naviagtionBar
+package com.example.f1.ui.components.navigationBar
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Android
