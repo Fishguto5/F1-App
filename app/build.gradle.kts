@@ -52,6 +52,13 @@ dependencies {
     testImplementation(libs.junit)
     implementation("androidx.compose.material:material-icons-core")
     implementation("androidx.compose.material:material-icons-extended")
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:3.0.0")
+    // Conversor JSON (Kotlinx Serialization)
+    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:1.0.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.10.0")
+    // OkHttp (opcional, mas recomendado para logs)
+    implementation("com.squareup.okhttp3:logging-interceptor:5.3.2")
     implementation(libs.androidx.navigation.compose)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
